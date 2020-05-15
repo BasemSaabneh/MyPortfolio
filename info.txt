@@ -1,0 +1,6 @@
+https://www.youtube.com/watch?v=pqtsibzqtZw
+
+Core Classes
+EntityBase(Id) // For Inheritance
+Owner(Id, Name, Avatar, Portfolio)
+PortfolioItem(Id, Name, Picture, Description)
