@@ -1,6 +1,42 @@
 https://www.youtube.com/watch?v=pqtsibzqtZw
 
+download theme
+http://www.mediafire.com/file/yxaw42ut2ms8ly3/SOLID_Principles_in_C%2523.pdf/file
+
 Core Classes
 EntityBase(Id) // For Inheritance
 Owner(Id, Name, Avatar, Portfolio)
 PortfolioItem(Id, Name, Picture, Description)
+
+
+=====================
+In Infrastructure App 
+Download  using NuGEt
+Microsoft.EntityFrameworkCore 
+AND
+Microsoft.EntityFrameworkCore.Design
+AND
+Microsoft.EntityFrameworkCore.sqlserver
+AND
+entityframework.relational
+AND
+entityframework.tools
+
+
+to access data from Core App we add reference to Infrastucre
+
+install 
+dotnet tool install --global dotnet-ef --version 3.0.0
+
+
+--------------------------
+to enable Migration 
+// first navigate to Infrastructure App where DbConext is
+PM> cd .\Infrastructure
+
+Then Run Command
+this code -s ..\Web\Web.csproj to get connection from app.settings
+PM> dotnet ef migrations add InitialCreate -s ..\Web\Web.csproj
+
+Then
+PM> dotnet ef database update -s ..\Web\Web.csproj
